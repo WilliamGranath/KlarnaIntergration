@@ -16,8 +16,6 @@ const push = require('../routes/server/push');
 const notFound = require('../routes/both/404.js');
 const serviceUnavailable = require('../routes/both/500.js');
 
-
-
 /**
  * 	Set URLS for our Routes
  **/
@@ -32,6 +30,5 @@ app.use('/order-lines', orderLines);
 // Set Server & Client (Error) Route URLS
 app.use('/500', serviceUnavailable);
 app.use('*', notFound); // Always keep as last route
-
 
 module.exports = app;
